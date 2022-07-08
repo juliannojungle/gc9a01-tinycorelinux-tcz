@@ -1,0 +1,26 @@
+# For more options and information see 
+# http://www.raspberrypi.org/documentation/configuration/config-txt.md
+# Some settings may impact device functionality. See link above for details
+#
+# For Device-tree overlays, please reference overlays/README on the boot partition.
+#
+
+[PI0W]
+initramfs rootfs-13.1.0.gz,modules-5.10.77.gz,dr_n_u.gz followkernel
+kernel kernel-5.10.77-piCore.img
+
+[ALL]
+cmdline cmdline.txt
+
+# Uncomment some or all of these to enable the optional hardware interfaces
+#dtparam=i2c_arm=on
+#dtparam=i2s=on
+#dtparam=spi=on
+
+# Additional overlays and parameters are documented /boot/overlays/README
+hdmi_force_hotplug=1 #force HDMI output rather than DVI.
+dtoverlay=gc9a01 #setup GC9A01 based LCD to '/dev/fb1' on 'spi0'
+hdmi_cvt=240 240 60 1 0 0 0 #<width> <height> <framerate> <aspect> <margins> <interlace>
+hdmi_group=2 #set DMT group (Display Monitor Timings: the standard typically used by monitors)
+hdmi_mode=87 #set DMT mode.
+hdmi_drive=2 #force a HDMI mode rather than DVI.
