@@ -40,5 +40,7 @@ Note that in `onboot.lst` there's only the necessary extensions to display image
 
 _**If you have different needs, it's up to you to alter those files on your own.**_
 
+![RPiZeroW-LCD.jpg](RPiZeroW-LCD.jpg)
+
 ---
 <sup>[@juliannojungle](https://github.com/juliannojungle), 2022</sup>
