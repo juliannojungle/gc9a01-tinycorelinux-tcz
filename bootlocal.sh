@@ -5,7 +5,6 @@ echo ondemand > /sys/devices/system/cpu/cpu0/cpufreq/scaling_governor
 
 # Load modules - i2c-dev needs manually loaded even if enabled in config.txt
 #/sbin/modprobe i2c-dev
-/sbin/modprobe fb_ili9340
 
 # Wait fb1 to be ready
 counter=0
